@@ -12,10 +12,10 @@
         <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     </head>
     <body>        
-        <div id="container" class="boxed-page">            
+        <div id="container" class="boxed-page">
             <div class="hidden-header"></div>
             <header class="clearfix">
-                <jsp:include page="navigation.jsp"/>                                
+                <jsp:include page="navigation.jsp?active=1"/>                                
             </header>
             <jsp:include page="../application/slider.jsp"/>
 
@@ -32,8 +32,8 @@
                                 <i class="fa fa-heart icon-large"></i>
                             </div>
                             <div class="service-content">
-                                <h4>Regalo en clave</h4>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor.</p>
+                                <h4><spring:message code="text1" /></h4>
+                                <p>Toda una experiencia de hacerte presente de manera práctica, sutil y con clase.</p>
                             </div>
                         </div>
                         <!-- End Service Icon 1 -->
@@ -44,8 +44,8 @@
                                 <i class="fa fa-magic icon-large"></i>
                             </div>
                             <div class="service-content">
-                                <h4>La magia de regalar</h4>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor.</p>
+                                <h4>la magia de regalar</h4>
+                                <p>Vive en equilibrio perfecto  la increíble satisfacción de dar y recibir.</p>
                             </div>
                         </div>
                         <!-- End Service Icon 2 -->
@@ -57,7 +57,7 @@
                             </div>
                             <div class="service-content">
                                 <h4>Todo en un solo lugar</h4>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor.</p>
+                                <p>Encuentra con nosotros la respuesta al ¡QUE! ¡COMO! ¡CUANDO! Y ¡DONDE! Regala y regálate lo que tú quieras.</p>
                             </div>
                         </div>
                         <!-- End Service Icon 3 -->
@@ -68,8 +68,10 @@
                                 <i class="fa fa-rocket icon-large"></i>
                             </div>
                             <div class="service-content">
-                                <h4>La manera mas rapida</h4>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor.</p>
+                                <h4>Motivos</h4>
+                                <p>Siempre hay un motivo para regalar.
+                                    Cumpleaños, Santo, Aniversario, Navidad, Reyes, San Valentín, Día de la madre, del padre, del niño y...
+                                <strong>SOLO PORQUE SÍ</strong>.</p>
                             </div>
                         </div>
                         <!-- End Service Icon 3 -->
@@ -79,92 +81,21 @@
 
                     <!-- Divider -->
                     <div class="hr5" style="margin-top:25px; margin-bottom:45px;"></div>
-
-                    <div class="row">
-
+                    <div class="row">                        
                         <!-- Start Big Heading -->
                         <div class="big-title text-center">
-                            <h1>La forma mas<span class="accent-color"> flexible</span> y <span class="accent-color">facil</span> de usar.</h1>
-                            <p class="title-desc">Lorem Ipsum is simply dummy text of the typesetting industry.</p>
+                            <h1>La forma mas<span class="accent-color"> segura</span> y <span class="accent-color">facil</span> de usar.</h1>
+                            <p class="title-desc">todos los dias son buenos para regalar.</p>
+                            <a href="<c:url value="/giveAway" />" class="slider btn btn-success">
+                                <span class="fa fa-gift"></span>
+                                hacer un regalo hoy
+                            </a>
+                            <br/>                            
                         </div>
                         <!-- End Big Heading -->
-
-                        <!-- Divider -->
-                        <div class="hr1" style="margin-top:20px; margin-bottom:20px;"></div>
-
-                        <!-- Start Service Icon 1 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-magic icon-mini-effect icon-effect-3 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 1 -->
-
-                        <!-- Start Service Icon 1 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-magic icon-mini-effect icon-effect-3 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 1 -->
-
-                        <!-- Start Service Icon 1 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-magic icon-mini-effect icon-effect-3 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 1 -->
-
-                        <!-- Start Service Icon 2 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-rocket icon-mini-effect icon-effect-6 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 2 -->
-
-                        <!-- Start Service Icon 3 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-eye icon-mini-effect icon-effect-5 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 3 -->
-
-                        <!-- Start Service Icon 4 -->
-                        <div class="col-md-4 service-box service-icon-left">
-                            <div class="service-icon">
-                                <i class="fa fa-pencil icon-mini-effect icon-effect-4 gray-icon"></i>
-                            </div>
-                            <div class="service-content">
-                                <h4>Regalo en Clave</h4>
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia dolores.</p>
-                            </div>
-                        </div>
-                        <!-- End Service Icon 4 -->
-
                     </div>
+
+
 
                     <!-- Divider -->
                     <div class="hr5" style="margin-top:50px; margin-bottom:55px;"></div>
@@ -174,19 +105,23 @@
                         <div class="col-md-3">
                             <!-- Start Big Heading -->
                             <div class="big-title">
-                                <h1>Aficiones <span class="accent-color"></span></h1>
-                                <p class="title-desc">Algunas de las cosas que tenemos para ti</p>
+                                <h1>Opciones <span class="accent-color"></span></h1>
+                                <p class="title-desc">
+
+                                </p>
                             </div>
                             <!-- End Big Heading -->
 
                             <!-- Some Text -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adi elit, sed do eiusmod tempor incididunt.</p>
-
+                            <p>
+                                Algunas de las cosas que tenemos para ti.
+                                Encuentra tu regalo exacto, lo que más te guste, lo que necesites en el momento, cambia tus 
+                                Regalos en Clave por los productos o servicios que nuestros Socios Afiliados te ofrecen, 
+                                seguro que encuentras aquello que estabas deseando.
+                            </p>
                             <!-- Divider -->
                             <div class="hr1" style="margin-bottom:10px;"></div>
 
-                            <!-- Some Text -->
-                            <p>Lorem ipsum dolor sit amet, consectetur adi elit, sed do eiusmod tempor incididunt enim labore et dolore magna aliqua. Ut enim nisi minim veniam, quis nostrud exercitation do ullamco laboris nisi ut aliquip ex commodo.</p>
                         </div>
 
                         <!-- Start Memebr 1 -->
@@ -195,20 +130,20 @@
                                 <!-- Memebr Photo, Name & Position -->
                                 <div class="member-photo">
                                     <img alt="" src="<c:url value="/resources/images/team/face_1.png" />" />
-                                    <div class="member-name">John Doe <span>Developer</span></div>
+                                    <div class="member-name">Sanborns <span>Departamental</span></div>
                                 </div>
                                 <!-- Memebr Words -->
                                 <div class="member-info">
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
                                 </div>
                                 <!-- Memebr Social Links -->
-                                <div class="member-socail">
+                                <!--<div class="member-socail">
                                     <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
                                     <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
                                     <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
                                     <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
                                     <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- End Memebr 1 -->
@@ -219,20 +154,20 @@
                                 <!-- Memebr Photo, Name & Position -->
                                 <div class="member-photo">
                                     <img alt="" src="<c:url value="/resources/images/team/face_2.png" />" />
-                                    <div class="member-name">Silly Sally <span>Developer</span></div>
+                                    <div class="member-name">Suburbia <span>Departamental</span></div>
                                 </div>
                                 <!-- Memebr Words -->
                                 <div class="member-info">
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
                                 </div>
                                 <!-- Memebr Social Links -->
-                                <div class="member-socail">
+                                <!--<div class="member-socail">
                                     <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
                                     <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
                                     <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
                                     <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
                                     <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- End Memebr 2 -->
@@ -243,32 +178,28 @@
                                 <!-- Memebr Photo, Name & Position -->
                                 <div class="member-photo">
                                     <img alt="" src="<c:url value="/resources/images/team/face_3.png" />" />
-                                    <div class="member-name">Chris John <span>Developer</span></div>
+                                    <div class="member-name">Palacio de Hierro <span>Departamental</span></div>
                                 </div>
                                 <!-- Memebr Words -->
                                 <div class="member-info">
                                     <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore fugiat.</p>
                                 </div>
                                 <!-- Memebr Social Links -->
-                                <div class="member-socail">
+                                <!--<div class="member-socail">
                                     <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
                                     <a class="gplus" href="#"><i class="fa fa-google-plus"></i></a>
                                     <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
                                     <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
                                     <a class="mail" href="#"><i class="fa fa-envelope"></i></a>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- End Memebr 3 -->
-
                     </div>
-
                     <!-- Divider -->
                     <div class="hr5" style="margin-top:55px; margin-bottom:55px;"></div>
 
                     <div class="row">
-
-
                         <div class="col-md-3">
                             <!-- Start Big Heading -->
                             <div class="big-title">
@@ -327,10 +258,8 @@
                             </div>
                             <!--End Clients Carousel-->
                         </div>
-
-
                     </div>
-
+                    <jsp:include page="miniBar.jsp"/>
                 </div>
             </div>
             <!-- End Content -->
@@ -339,7 +268,7 @@
         <!-- End Container -->
 
         <!-- Go To Top Link -->
-        <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
+        <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>        
 
         <div id="loader">
             <div class="spinner">

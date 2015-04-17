@@ -8,45 +8,45 @@
             <!-- Start Subscribe & Social Links Widget -->
             <div class="col-md-3">
                 <div class="footer-widget mail-subscribe-widget">
-                    <h4>Get in touch<span class="head-line"></span></h4>
-                    <p>Join our mailing list to stay up to date and get notices about our new releases!</p>
+                    <h4>Sigue en Contacto<span class="head-line"></span></h4>
+                    <p>Unete a nuestra lista para estar actualizado</p>
                     <form class="subscribe">
-                        <input type="text" placeholder="mail@example.com">
-                        <input type="submit" class="main-button" value="Send">
+                        <input type="text" placeholder="correo@ejemplo.com" id="subscriberEmail">
+                        <input type="button" class="btn main-button btn-success" value="enviar" onclick="addSubscriber()">
                     </form>
                 </div>
                 <div class="footer-widget social-widget">
-                    <h4>Follow Us<span class="head-line"></span></h4>
+                    <h4>Siguenos<span class="head-line"></span></h4>
                     <ul class="social-icons">
                         <li>
-                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="facebook" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li>
-                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="twitter" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
                         </li>
                         <li>
-                            <a class="google" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="google" href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
                         </li>
                         <li>
-                            <a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a>
+                            <a class="dribbble" href="#" target="_blank"><i class="fa fa-dribbble"></i></a>
                         </li>
                         <li>
-                            <a class="linkdin" href="#"><i class="fa fa-linkedin"></i></a>
+                            <a class="linkdin" href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                         </li>
                         <li>
-                            <a class="flickr" href="#"><i class="fa fa-flickr"></i></a>
+                            <a class="flickr" href="#" target="_blank"><i class="fa fa-flickr"></i></a>
                         </li>
                         <li>
-                            <a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a>
+                            <a class="tumblr" href="#" target="_blank"><i class="fa fa-tumblr"></i></a>
                         </li>
                         <li>
-                            <a class="instgram" href="#"><i class="fa fa-instagram"></i></a>
+                            <a class="instgram" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
                         </li>
                         <li>
-                            <a class="vimeo" href="#"><i class="fa fa-vimeo-square"></i></a>
+                            <a class="vimeo" href="#" target="_blank"><i class="fa fa-vimeo-square"></i></a>
                         </li>
                         <li>
-                            <a class="skype" href="#"><i class="fa fa-skype"></i></a>
+                            <a class="skype" href="#" target="_blank"><i class="fa fa-skype"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -57,19 +57,19 @@
             <!-- Start Twitter Widget -->
             <div class="col-md-3">
                 <div class="footer-widget twitter-widget">
-                    <h4>Twitter Feed<span class="head-line"></span></h4>
+                    <h4>Informacion<span class="head-line"></span></h4>
                     <ul>
                         <li>
-                            <p><a href="#">@ithemeslab </a> Lorem ipsum dolor et, consectetur adipiscing eli.</p>
-                            <span>28 February 2014</span>
+                            <p><a href="/freelancer">Unete a nuestro equipo, </a>se parte de nuestro equipo de freelancers</p>
+                            <span><a href="/freelancer">mas informacion >></a></span>
                         </li>
                         <li>
-                            <p><a href="#">@ithemeslab </a> Lorem ipsum dolor et, consectetur adipiscing eli.An Fusce eleifend aliquet nis application.</p>
-                            <span>26 February 2014</span>
+                            <p><a href="#">Aumenta tus ingresos, </a>los afiliados a regalo en clave aumentan sus ingresos facilmente</p>
+                            <span><a href="<c:url value="/affiliate"/>">mas informacion >></a></span>
                         </li>
                         <li>
-                            <p><a href="#">@ithemeslab </a> Lorem ipsum dolor et, consectetur adipiscing eli.</p>
-                            <span>28 February 2014</span>
+                            <p><a href="faq">Preguntas frecuentes, </a>resuelve tus dudas.</p>
+                            <span><a href="<c:url value="/faq"/>">mas informacion >></a></span>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
             <!-- Start Flickr Widget -->
             <div class="col-md-3">
                 <div class="footer-widget flickr-widget">
-                    <h4>Sponsors<span class="head-line"></span></h4>
+                    <h4>Negocios Afiliados<span class="head-line"></span></h4>
                     <ul class="flickr-list">
                         <li>
                             <a href="<c:url value="/resources/images/flickr-01.jpg" />" class="lightbox">
@@ -128,6 +128,7 @@
                             </a>
                         </li>
                     </ul>
+                    <a href="<c:url value="/affiliates"/>">ver todos >></a>                    
                 </div>
             </div><!-- .col-md-3 -->
             <!-- End Flickr Widget -->
@@ -142,8 +143,8 @@
                     </h4>
                     <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
                     <ul>
-                        <li><span>Phone Number:</span> +01 234 567 890</li>
-                        <li><span>Email:</span> regaloenclave@regaloenclave.com</li>
+                        <li><span>Phone Number:</span>(33) 1817 6000</li>
+                        <li><span>Email:</span> contacto@regaloenclave.com</li>
                         <li><span>Website:</span> www.regaloenclave.com</li>
                     </ul>
                 </div>
@@ -157,13 +158,13 @@
         <div class="copyright-section">
             <div class="row">
                 <div class="col-md-6">
-                    <p>&copy; 2014 Regalo en clave -  All Rights Reserved</p>
+                    <p>&copy; 2015 Regalo en clave -  All Rights Reserved</p>
                 </div>
                 <div class="col-md-6">
                     <ul class="footer-nav">
-                        <li><a href="#">Sitemap</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="<c:url value="/sitemap"/>">mapa de sitio</a></li>
+                        <li><a href="<c:url value="/privacyPolicy"/>">Politicas de privacidad</a></li>
+                        <li><a href="<c:url value="/contact"/>">Contacto</a></li>
                     </ul>
                 </div>						
             </div>

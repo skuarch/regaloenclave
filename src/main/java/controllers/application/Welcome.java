@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Welcome {
 
-    @RequestMapping(value = {"/welcome", "welcome", "/"})
+    @RequestMapping(value = {"/welcome", "welcome", "/", "inicio", "home", "index"})
     public ModelAndView welcome(Locale locale) {
 
         System.out.println("el lenguaje: " + locale.getDisplayLanguage());

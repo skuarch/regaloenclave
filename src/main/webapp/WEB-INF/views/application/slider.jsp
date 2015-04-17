@@ -25,7 +25,8 @@
                             <span>La nueva forma de hacer regalos</span>
                         </h3>
                         <p class="animated4">
-                            <a href="#" class="slider btn btn-success">
+                            <a href="<c:url value="/giveAway" />" class="slider btn btn-success">
+                                <span class="fa fa-gift"></span>
                                 hacer un regalo hoy
                             </a>
                         </p>
@@ -37,12 +38,13 @@
                 <div class="slider-content">
                     <div class="col-md-12 text-center">
                         <h2 class="animated4 white text-shadow">
-                            <span><strong class="red">Regala</strong> a cualquier persona</span>
+                            <span><strong class="red">Para</strong>cualquier persona</span>
                         </h2>
                         <h3 class="animated5 text-shadow orange">
-                            <span>The Key of your Success</span>
+                            <span>siempre hay motivos para regalar</span>
                         </h3>		
-                        <a href="#" class="animated4 slider btn btn-success">
+                        <a href="<c:url value="/giveAway" />" class="animated4 slider btn btn-success">
+                            <span class="fa fa-gift"></span>
                             hacer un regalo hoy
                         </a>
                     </div>
@@ -59,7 +61,8 @@
                             <span>las sorpresas siempre son <span class="red">agradables</span></span>
                         </h3>		
                         <div class="animated8">
-                            <a href="#" class="slider btn btn-success">
+                            <a href="<c:url value="/giveAway" />" class="slider btn btn-success">
+                                <span class="fa fa-gift"></span>
                                 hacer un regalo hoy
                             </a>
                         </div>     
