@@ -2,6 +2,7 @@ package controllers.application;
 
 import java.util.Locale;
 import controllers.application.BaseController;
+import javax.servlet.http.HttpServletResponse;
 import model.util.HandlerExceptionUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,12 +25,13 @@ public class Affiliate extends BaseController {
 
     //==========================================================================
     @RequestMapping(value = {"/affiliate", "affiliate","afiliar","/afiliar"})
-    public ModelAndView methodName(Locale locale){
+    public ModelAndView methodName(HttpServletResponse response, Locale locale){
 
         ModelAndView mav = null;
 
         try {
             
+            setHeaderNoChache(response);
             mav = new ModelAndView("application/affiliate");
             
         } catch (Exception e) {

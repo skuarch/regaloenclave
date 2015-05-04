@@ -599,18 +599,26 @@ jQuery(window).load(function(){
 });
 
 function showError(){
-    alertify.alert("lo sentimos tenemos un error. por favor intentalo mas tarde");
+    alertify.alert("lo sentimos tenemos un error. por favor intentalo mas tarde<br/><br/>");
     alertify.error("error en operacion");
 }
 
 function showSuccess(){
-    alertify.alert("operacion terminada con exito");
+    alertify.alert("operacion terminada con exito<br/><br/>");
     alertify.success("operacion terminada con exito");
 }
 
 function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   return regex.test(email);
+}
+
+function preventDefaultForm(event){
+    if (event.preventDefault) {
+        event.preventDefault();
+    } else {
+        event.returnValue = false;
+    }    
 }
 
 function addSubscriber(){
@@ -621,7 +629,6 @@ function addSubscriber(){
         alertify.alert("gracias por subscribirte a regalo en clave");    
     }        
 }
-
 
 function myGifts(){
     
@@ -646,6 +653,106 @@ function myGifts(){
     }
     
 }
+
+$("#createPartnerForm").submit(function (event) {
+    createPartner(event);
+});
+
+function createPartner(event){
+    
+    preventDefaultForm(event);
+    
+    var error = "";
+    var name = $("#name").val();    
+    var lastName = $("#lastName").val();    
+    var phone = $("#phone").val();    
+    var email = $("#email").val();        
+    var password = $("#password").val();        
+    var passwordConfirm = $("#passwordConfirm").val();        
+    var gender = $("#gender").val();        
+    
+    if (name.length < 2) {
+        error += "<br>el nombre es muy corto";
+    }
+
+    if (lastName.length < 5) {
+        error += "<br> el apellido es muy corto";
+    }
+
+    if (!isEmail(email)) {
+        error += "<br> el email es incorrecto";
+    }
+
+    if (isNaN(phone)) {
+        error += "<br>el telefono es incorrecto";
+    }
+
+    if (phone.length < 5) {
+        error += "<br>el telefono es muy corto";
+    }
+
+    if (password !== passwordConfirm) {
+        error += "<br/>los password no coinciden";        
+    }
+
+    if (password.length < 4) {
+        error += "<br>el password es muy corto";
+    }
+
+    if (password.length < 5 || password.length > 10) {
+        error += "<br>la longitud maxima del password es de 10 caracteres";
+    }
+    
+    if (gender == 1) {
+        g = "masculino";
+    } else {
+        g = "femenino";
+    }
+    
+    if (error.length > 0) {
+        alertify.alert("aparecer que algo esta mal<br>" + error);
+        return;
+    } else {
+        
+        var confirm = "Confirma los siguientes datos<br/><br/>";
+        confirm += "<div class='alert alert-warning'>";
+        confirm += "nombre: " + name;
+        confirm += "<br/>apellido: " + lastName;
+        confirm += "<br/>telefono: " + phone;
+        confirm += "<br/>email: " + email;
+        confirm += "<br/>genero: " + g;        
+        confirm += "</div>";
+        confirm += "he leido y acepto las condiciones de uso<br/><br/>";
+        
+        var data = {name:name, lastName: lastName, phone:phone, email:email, password:$.md5(String(password)), gender:gender};
+        alertify.confirm(confirm, function (e) {
+            if (e) {
+                $.ajax({
+                    url: "createPartner",
+                    type: "post",
+                    data:data,
+                    beforeSend: function (xhr) {                        
+                        $("#buttonForm").attr("disabled", "disabled");
+                    }, success: function (data, textStatus, jqXHR) {
+                        if(data.created === true){
+                            showSuccess();
+                            $("#createPartnerForm")[0].reset();
+                        }else{
+                            showError();
+                        }                                                
+                    }, error: function (jqXHR, textStatus, errorThrown) {
+                        showError();
+                    }, complete: function (jqXHR, textStatus) {
+                        $("#buttonForm").removeAttr("disabled");
+                    }
+                });
+            }
+        });
+    }    
+}
+
+
+
 
 
 /* ----------------- End JS Document ----------------- */

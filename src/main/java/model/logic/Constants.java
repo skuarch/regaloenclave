@@ -23,6 +23,7 @@ public class Constants {
     public static final String URI_FREELANCER_CREATE_AFFILIATE = "/freelancer/create/affiliate";
     public static final String URI_FREELANCER_UPDATE_PASSWORD = "/freelancer/update/password";
     public static final String URI_AFFILIATE_CREATE = "/affiliate/create";
+    
     public static final String URI_AFFILIATE_CREATE_ESTABLISHMENT = "/affiliate/create/establishment";
     public static final String URI_AFFILIATE_UPDATE_BASIC_INFORMATION = "/affiliate/update/basic/information";
     public static final String URI_AFFILIATE_UPDATE_TAX_INFORMATION = "/affiliate/update/tax/information";
@@ -45,6 +46,8 @@ public class Constants {
     public static final String URI_COMPANY_UPDATE_BASIC_INFORMATION = "/company/update/basic/information";   
     public static final String URI_COMPANY_UPDATE_TAX_INFORMATION = "/company/update/tax/information";
     public static final String URI_COMPANY_UPDATE_BANK_INFORMATION = "/company/update/bank/information";
+    public static final String URI_PARTNER_CREATE = "/partner/create";
+    
 
     public static short getAFFILIATE() {
         return AFFILIATE;
