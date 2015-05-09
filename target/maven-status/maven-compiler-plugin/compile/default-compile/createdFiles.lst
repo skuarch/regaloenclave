@@ -4,13 +4,14 @@ model/logic/Constants.class
 controllers/application/GiveAway.class
 controllers/application/privacyPolicy.class
 controllers/application/BaseController.class
+controllers/application/CreatePartnerForm.class
 model/util/ApplicationUtil.class
 model/logic/RestPostClient.class
 controllers/application/CreatePartner.class
-controllers/application/Affiliate.class
 controllers/application/How.class
 controllers/freelancer/freelancer.class
 model/logic/RestClient.class
+controllers/partner/Partner.class
 controllers/application/MyGifts.class
 controllers/application/ReportGifts.class
 model/util/HandlerExceptionUtil.class

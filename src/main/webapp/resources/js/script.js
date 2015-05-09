@@ -670,7 +670,7 @@ function createPartner(event){
     var password = $("#password").val();        
     var passwordConfirm = $("#passwordConfirm").val();        
     var gender = $("#gender").val();        
-    
+ 
     if (name.length < 2) {
         error += "<br>el nombre es muy corto";
     }

@@ -5,6 +5,6 @@
     <br/><br/>
     <a class="btn" href="<c:url value="/myGifs"/>">mis regalos</a> / 
     <a class="btn" href="<c:url value="/purchaser"/>">ya regale</a> / 
-    <a class="btn" href="<c:url value="/affiliate"/>">afiliarme</a> / 
+    <a class="btn" href="<c:url value="/createPartnerForm"/>">afiliarme</a> / 
     <a class="btn" href="<c:url value="/freelancer"/>">trabajar en regalo en clave</a> / 
 </div>

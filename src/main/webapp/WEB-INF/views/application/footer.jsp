@@ -60,15 +60,15 @@
                     <h4>Informacion<span class="head-line"></span></h4>
                     <ul>
                         <li>
-                            <p><a href="/freelancer">Unete a nuestro equipo, </a>se parte de nuestro equipo de freelancers</p>
-                            <span><a href="/freelancer">mas informacion >></a></span>
+                            <p><a href="<c:url value="/freelancer"/>">Unete a nuestro equipo, </a>se parte de nuestro equipo de freelancers</p>
+                            <span><a href="<c:url value="/freelancer"/>">mas informacion >></a></span>
                         </li>
                         <li>
-                            <p><a href="#">Aumenta tus ingresos, </a>los afiliados a regalo en clave aumentan sus ingresos facilmente</p>
-                            <span><a href="<c:url value="/affiliate"/>">mas informacion >></a></span>
+                            <p><a href="<c:url value="/createPartnerForm"/>">Aumenta tus ingresos, </a>los afiliados a regalo en clave aumentan sus ingresos facilmente</p>
+                            <span><a href="<c:url value="/affiliate"/>">entra al sistema de afiliados de regalo en clave >></a></span>
                         </li>
                         <li>
-                            <p><a href="faq">Preguntas frecuentes, </a>resuelve tus dudas.</p>
+                            <p><a href="<c:url value="/faq"/>">Preguntas frecuentes, </a>resuelve tus dudas.</p>
                             <span><a href="<c:url value="/faq"/>">mas informacion >></a></span>
                         </li>
                     </ul>

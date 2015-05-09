@@ -1,7 +1,7 @@
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/model/logic/RestPostClient.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/model/util/ApplicationUtil.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/Error404.java
-/home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/Affiliate.java
+/home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/CreatePartnerForm.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/Welcome.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/model/beans/Partner.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/Contact.java
@@ -16,7 +16,9 @@
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/model/logic/RestClient.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/CreatePartner.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/GiveAway.java
+/home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/affiliate/Affiliate.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/AffiliateDirectory.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/FAQ.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/Company.java
 /home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/application/How.java
+/home/skuarch-lap/NetBeansProjects/regaloenclave/src/main/java/controllers/partner/Partner.java
