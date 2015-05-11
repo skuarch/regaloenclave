@@ -751,6 +751,28 @@ function createPartner(event){
     }    
 }
 
+$("#giftForm").submit(function(event){    
+    preventDefaultForm(event);    
+    step2();        
+});
+
+function step1(){    
+    $("#step3").hide();
+    $("#step2").hide();
+    $("#step1").fadeIn();    
+}
+
+function step2(){        
+    $("#step1").hide();
+    $("#step3").hide();
+    $("#step2").fadeIn();    
+}
+
+function step3(){
+    $("#step1").hide();
+    $("#step2").hide();
+    $("#step3").fadeIn();    
+}
 
 
 

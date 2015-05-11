@@ -1,6 +1,7 @@
 model/beans/Partner.class
 controllers/application/Welcome.class
 model/logic/Constants.class
+controllers/affiliate/Affiliate.class
 controllers/application/GiveAway.class
 controllers/application/privacyPolicy.class
 controllers/application/BaseController.class
