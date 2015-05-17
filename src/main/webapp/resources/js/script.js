@@ -613,6 +613,18 @@ function isEmail(email) {
   return regex.test(email);
 }
 
+function isAcceptable(text) {
+    
+    //if (text != undefined && text.match(/^[0-9a-zA-Z\s]{1,16}$/)) {
+    if (text != undefined && text.match(/^(\w+ ?)*$/)) {
+        text = "";
+        return true;
+    } else {
+        text = "";
+        return false;
+    }
+}
+
 function preventDefaultForm(event){
     if (event.preventDefault) {
         event.preventDefault();
@@ -762,18 +774,347 @@ function step1(){
     $("#step1").fadeIn();    
 }
 
-function step2(){        
+var name1;
+var lastName1;
+var phone1;
+var email1;
+var name2;
+var lastName2;
+var phone2;
+var email2;
+
+function step2(){    
+    
+    //validation of step1
+    var error = "";
+    
+    name1 = $("#name1").val();        
+    if(name1 == '' || name1.length < 3 ){
+        error += "-El nombre es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(name1)){
+        error += "-El nombre contiene caracteres no aceptados<br/>";        
+    }
+    
+    lastName1 = $("#lastName1").val();    
+    if(lastName1 == '' || lastName1.length < 3){
+        error += "-El apellido es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(lastName1)){
+        error += "-El apellido contiene caracteres no aceptados<br/>";        
+    }
+    
+    phone1 = $("#phone1").val();
+    if(isNaN(phone1)){
+        error += "-Solo numero en el telefono<br/>";        
+    }    
+    
+    if(phone1 != '' && phone1.length < 7){
+        error += "-El telefono es muy corto<br/>";        
+    }
+    
+    if(phone1 != "" && !isAcceptable(phone1)){
+        error += "-El telefono contiene caracteres no aceptados<br/>";        
+    }        
+    
+    email1 = $("#email1").val();
+    if(!isEmail(email1)){
+        error += "-El correo es incorrecto<br/>";
+    }
+    
+    name2 = $("#name2").val();
+    if(name2 == '' || name2.length < 3 ){
+        error += "-El nombre es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(name2)){
+        error += "-El nombre contiene caracteres no aceptados<br/>";        
+    }
+    
+    lastName2 = $("#lastName2").val();
+    if(lastName2 == '' || lastName2.length < 3){
+        error += "-El apellido es muy corto<br/>";        
+    }
+    if(!isAcceptable(lastName2)){
+        error += "-El apellido contiene caracteres no aceptados<br/>";        
+    }
+    
+    phone2 = $("#phone2").val();
+    if(isNaN(phone2)){
+        error += "-Solo numero en el telefono<br/>";        
+    }    
+    
+    if(phone2 != '' && phone2.length < 7){
+        error += "-El telefono es muy corto<br/>";        
+    }
+    
+    if(phone2 != "" && !isAcceptable(phone2)){
+        error += "-El telefono contiene caracteres no aceptados<br/>";        
+    }
+    
+    email2 = $("#email2").val();
+    if(!isEmail(email2)){
+        error += "-El correo es incorrecto<br/>"
+    }
+    
+    if(error.length > 0){
+        alertify.alert("Parece que algo esta mal<br/><br/>" + error + "<br/>");
+        return;
+    }
+    
     $("#step1").hide();
     $("#step3").hide();
-    $("#step2").fadeIn();    
+    $("#step2").fadeIn();
+    
 }
 
+var holder;
+var number;
+var secret;
+var month;
+var year;
+var amount;
+var result;    
+
 function step3(){
+    
+    var error = "";
+    
+    holder = $("#holder").val();
+    if(holder == '' || holder.length < 10){
+        error += "-El nombre del titular de la tarjeta de credito es muy corto<br>";
+    }
+    
+    if(holder != "" && !isAcceptable(holder)){
+        error += "-El titular de la tarjeta contiene caracteres no aceptados<br/>";        
+    }
+    
+    number = $("#number").val();
+    if(number == '' || number.length < 16 || number.length > 16 ){
+        error += "-El numero de la tarjeta de credito es incorrecto<br>";
+    }
+    
+    if(number != "" && String(number).indexOf(" ") == 1 ){
+        error += "-El numero de la tarjeta contiene caracteres o espacios no aceptados<br/>";        
+    }
+    
+    month = $("#month").val();
+    if(month < 1 || month > 12){
+        error += "-El mes es incorrecto<br/>";        
+    }
+    
+    year = $("#year").val();
+    if(year < 1 || year > 2020){
+        error += "-El año es incorrecto<br/>";        
+    }
+    
+    secret = $("#secret").val();
+    if(secret == '' || secret.length < 3 || secret.length > 3){
+        error += "-El codigo de validacion debe de ser de 3 digitos<br>";
+    }
+    
+    if(secret != "" && !isAcceptable(secret)){
+        error += "-El codigo de validacion de la tarjeta contiene caracteres no aceptados<br/>";        
+    }
+    
+    amount = document.getElementById("amount").value;
+    if(amount == '' || amount.length < 3 || amount < 100){
+        error += "-El monto es muy pequeño<br>";
+    }
+    
+    if(amount != "" && !isAcceptable(amount)){
+        error += "-El monto contiene caracteres no aceptados<br/>";        
+    }
+    
+    if(amount > 10000){
+        error += "-El monto es mayor a 10000<br>";
+    }
+    
+    if(isNaN(amount)){
+        error += "-El monto deben de ser numeros<br/>";        
+    }    
+    
+    result = (amount % 100);    
+    if(result != 0){
+        error += "-El monto tiene que ser en multiplos de 100<br/>";        
+    }
+    
+    if(error.length > 0){
+        alertify.alert("Parece que algo esta mal<br/><br/>" + error + "<br/>");
+        return;
+    }else{                
+        
+        $("#output1").html(name1);
+        $("#output2").html(lastName1);
+        $("#output3").html(phone1);
+        $("#output4").html(email1);
+        $("#output5").html(name2);
+        $("#output6").html(lastName2);
+        $("#output7").html(phone2);
+        $("#output8").html(email2);
+        $("#output9").html(holder);
+        $("#output10").html(amount);        
+                
+    }
+    
     $("#step1").hide();
     $("#step2").hide();
     $("#step3").fadeIn();    
 }
 
+function step4(){
+    
+    var error = "";    
+    
+    if(name1 == '' || name1.length < 3 ){
+        error += "-El nombre es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(name1)){
+        error += "-El nombre contiene caracteres no aceptados<br/>";        
+    }    
+    
+    if(lastName1 == '' || lastName1.length < 3){
+        error += "-El apellido es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(lastName1)){
+        error += "-El apellido contiene caracteres no aceptados<br/>";        
+    }    
+    
+    if(isNaN(phone1)){
+        error += "-Solo numero en el telefono<br/>";        
+    }    
+    
+    if(phone1 != '' && phone1.length < 7){
+        error += "-El telefono es muy corto<br/>";        
+    }
+    
+    if(phone1 != "" && !isAcceptable(phone1)){
+        error += "-El telefono contiene caracteres no aceptados<br/>";        
+    }            
+    
+    if(!isEmail(email1)){
+        error += "-El correo es incorrecto<br/>";
+    }    
+    
+    if(name2 == '' || name2.length < 3 ){
+        error += "-El nombre es muy corto<br/>";        
+    }
+    
+    if(!isAcceptable(name2)){
+        error += "-El nombre contiene caracteres no aceptados<br/>";        
+    }    
+    
+    if(lastName2 == '' || lastName2.length < 3){
+        error += "-El apellido es muy corto<br/>";        
+    }
+    if(!isAcceptable(lastName2)){
+        error += "-El apellido contiene caracteres no aceptados<br/>";        
+    }    
+    
+    if(isNaN(phone2)){
+        error += "-Solo numero en el telefono<br/>";        
+    }    
+    
+    if(phone2 != '' && phone2.length < 7){
+        error += "-El telefono es muy corto<br/>";        
+    }
+    
+    if(phone2 != "" && !isAcceptable(phone2)){
+        error += "-El telefono contiene caracteres no aceptados<br/>";        
+    }    
+    
+    if(!isEmail(email2)){
+        error += "-El correo es incorrecto<br/>"
+    }    
+    
+    if(holder == '' || holder.length < 10){
+        error += "-El nombre del titular de la tarjeta de credito es muy corto<br>";
+    }
+    
+    if(holder != "" && !isAcceptable(holder)){
+        error += "-El titular de la tarjeta contiene caracteres no aceptados<br/>";        
+    }
+    
+    if(number == '' || number.length < 16 || number.length > 16 ){
+        error += "-El numero de la tarjeta de credito es incorrecto<br>";
+    }
+    
+    if(number != "" && String(number).indexOf(" ") == 1 ){
+        error += "-El numero de la tarjeta contiene caracteres o espacios no aceptados<br/>";        
+    }    
+    
+    if(month < 1 || month > 12){
+        error += "-El mes es incorrecto<br/>";        
+    }    
+    
+    if(year < 1 || year > 2020){
+        error += "-El año es incorrecto<br/>";        
+    }
+    
+    if(secret == '' || secret.length < 3 || secret.length > 3){
+        error += "-El codigo de validacion debe de ser de 3 digitos<br>";
+    }
+    
+    if(secret != "" && !isAcceptable(secret)){
+        error += "-El codigo de validacion de la tarjeta contiene caracteres no aceptados<br/>";        
+    }
+    
+    if(amount == '' || amount.length < 3 || amount < 100){
+        error += "-El monto es muy pequeño<br>";
+    }
+    
+    if(amount > 10000){
+        error += "-El monto es mayor a 10000<br>";
+    }
+    
+    if(amount != "" && !isAcceptable(amount)){
+        error += "-El monto contiene caracteres no aceptados<br/>";        
+    }
+    
+    if(isNaN(amount)){
+        error += "-El monto deben de ser numeros<br/>";        
+    }    
+    
+    if(result != 0){
+        error += "-El monto tiene que ser en multiplos de 100<br/>";        
+    }        
+    
+    if(!$("#terms").is(":checked")){
+        error += "-debes de aceptar los terminos y condiciones<br/>";        
+    }
+    
+    if(error.length > 0){
+        alertify.alert("Parece que algo esta mal<br/><br/>" + error + "<br/>");
+        return;
+    }else{                
+        formData = {name1: name1,lastName1: lastName1,phone1: phone1,email1: email1,name2: name2,lastName2: lastName2,phone2: phone2,email2: email2,holder: holder,number: number,month: month,year: year,secret: secret,amount: amount};
+        $.ajax({
+            cache: false,
+            url: "gift",
+            type: "post",
+            data: formData,            
+            beforeSend: function (xhr) {
+                //$("#step3").html("estamos creando tu sorpresa por favor espera");
+            }, success: function (data, textStatus, jqXHR) {
+                if(data.created == true){
+                    alertify.alert("tu regalo se realizo con exito");
+                }else{
+                    showError()
+                }                
+                //$("#step3").html("tu regalo se realizo con exito");
+            }, error: function (jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown);
+                showError();
+                //$("#step3").html("tuvimos un error por favor vuelve a intentarlo");
+            }
+        });
+    }
+    
+}
 
 
 

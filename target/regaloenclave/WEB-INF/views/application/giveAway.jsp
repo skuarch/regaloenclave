@@ -53,9 +53,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading" style="text-align: center">
                             <br/>
-                            <h1>Estas a un paso de dar una sorpresa</h1>
-                            <a class="btn-link" href="">ya regale</a>
-                            <br/>
+                            <h1>Estas a un paso de dar una sorpresa</h1>                                                        
                             <br/>
                         </div>
                         <div class="panel-body">                                                        
@@ -69,30 +67,30 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="recipientName">
+                                                <label for="name1">
                                                     <strong>Nombre(s)</strong><span class="required">*</span>
                                                 </label>                                            
-                                                <input id="recipientName" name="recipientName" type="text" value="" size="30" required="required" tabindex="1">
+                                                <input id="name1" name="name1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="1">
                                             </div>                                    
                                             <div class="col-md-6">
-                                                <label for="recipientLastName">
+                                                <label for="lastName1">
                                                     <strong>Apellido(s)</strong><span class="required">*</span>
                                                 </label>                                            
-                                                <input id="name" name="recipientLastName" type="text" value="" size="30" required="required" tabindex="2">
+                                                <input id="lastName1" name="lastName1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="2">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="recipientPhone">
+                                                <label for="phone1">
                                                     <strong>Numero telefonico</strong>
                                                 </label>                                            
-                                                <input id="recipientPhone" name="recipientPhone" type="text" value="" size="30" tabindex="3">
+                                                <input id="phone1" name="phone1" type="number" class="form-control" value="" size="30" tabindex="3">
                                             </div>                                    
                                             <div class="col-md-6">
-                                                <label for="recipientEmail">
+                                                <label for="email1">
                                                     <strong>Correo electronico</strong><span class="required">*</span>
                                                 </label>                                            
-                                                <input id="recipientEmail" name="recipientEmail" type="text" value="" size="30" required="required" tabindex="4">
+                                                <input id="email1" name="email1" type="email" class="form-control" value="" size="30" required="required" tabindex="4">
                                             </div>
                                         </div>
 
@@ -103,33 +101,33 @@
                                         </div>                               
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="shopperName">
+                                                <label for="name2">
                                                     <strong>Nombre(s)</strong><span class="required">*</span>
                                                 </label>                                        
-                                                <input id="shopperName" name="shopperName" type="text" value="" size="30" tabindex="5">
+                                                <input id="name2" name="name2" type="text" class="form-control" value="" size="30" tabindex="5">
                                             </div>                                    
                                             <div class="col-md-6">
-                                                <label for="shopperLastName">
+                                                <label for="lastName2">
                                                     <strong>Apellidos</strong><span class="required">*</span>
                                                 </label>                                        
-                                                <input id="shopperLastName" name="shopperLastName" type="text" value="" size="30" required="required" tabindex="6">
+                                                <input id="lastName2" name="lastName2" type="text" class="form-control" value="" size="30" required="required" tabindex="6">
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <label for="shopperPhone">
+                                                <label for="phone2">
                                                     <strong>Telefono</strong>
                                                 </label>                                        
-                                                <input id="shopperPhone" name="shopperPhone" type="text" value="" size="30" tabindex="7">
+                                                <input id="phone2" name="phone2" type="number" class="form-control" value="" size="30" tabindex="7">
                                             </div>                                    
                                             <div class="col-md-6">
-                                                <label for="shopperEmail">
+                                                <label for="email2">
                                                     <strong>Correo electronico</strong><span class="required">*</span>
                                                 </label>                                        
-                                                <input id="shopperEmail" name="shopperEmail" type="text" value="" size="30" required="required" tabindex="8">
+                                                <input id="email2" name="email2" type="text" class="form-control" value="" size="30" required="required" tabindex="8">
                                             </div>
                                         </div>
-                                        <input type="button" class="btn btn-block btn-success btn-lg" value="siguiente paso" tabindex="11" onclick="step2();">
+                                        <input type="submit" class="btn btn-block btn-success btn-lg" value="siguiente paso" tabindex="9">
                                     </div>
                                     <div id="step2" style="display: none">
                                         <br/>
@@ -140,11 +138,11 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 titular de la tarjeta de credito:
-                                                <input id="titular" name="titular" type="text" value="" size="30" tabindex="7">
+                                                <input id="holder" name="holder" type="text" class="form-control" value="" size="30" maxlength="30" tabindex="10">
                                             </div>
                                             <div class="col-md-6">
                                                 numero de tarjeta de credito:
-                                                <input id="numero" name="numero" type="text" tabindex="7">
+                                                <input id="number" name="number" type="number" maxlength="16" class="form-control" tabindex="11">
                                             </div>
                                         </div>
                                         <div class="row">
@@ -152,7 +150,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-group">                                                    
                                                     valida: (mes)<br/>
-                                                    <select class="form-control">
+                                                    <select id="month" name="month" class="form-control" tabindex="12">
                                                         <option>01</option>
                                                         <option>02</option>
                                                         <option>03</option>
@@ -170,7 +168,7 @@
                                                 </div>                                                
                                                 <div class="col-md-6">
                                                     / (año)<br/>
-                                                    <select class="form-control">
+                                                    <select id="year" name="year" class="form-control" tabindex="13">
                                                         <option>2015</option>
                                                         <option>2016</option>
                                                         <option>2017</option>
@@ -183,28 +181,31 @@
                                         
                                             <div class="col-md-6">
                                                 codigo de validacion de la tarjeta de credito:
-                                                <input id="codigo" name="codigo" type="text" tabindex="7">
+                                                <input id="secret" name="secret" type="number" class="form-control" tabindex="14">
                                             </div>
                                         </div>                                    
                                         <div class="row">
                                             <div class="col-md-12">
                                                 Monto a regalar
-                                                <input type="text" id="monto" name="monto" placeholder="cantidad minima 100 pesos, solo multiplos de 100">
+                                                <input type="number" id="amount" name="amount" class="form-control" placeholder="cantidad minima $100 pesos, solo multiplos de 100" tabindex="15">
                                             </div>                                               
                                         </div>    
                                         <br/>
                                         <div class="alert alert-warning">
                                             en este paso todavia no se hace el cargo a la tarjeta de credito
                                         </div>    
+                                        <div class="alert alert-success">
+                                            regalo en clave no guardara los datos de la tarjeta de credito
+                                        </div>    
                                         <br/>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="step1()">
+                                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="step1()" tabindex="16">
                                                     regresar 
                                                 </button>
                                             </div>
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-success btn-lg btn-block" onclick="step3()">
+                                                <button type="button" class="btn btn-success btn-lg btn-block" onclick="step3()" tabindex="17">
                                                     siguiente
                                                 </button>
                                             </div>
@@ -212,77 +213,71 @@
                                     </div>
                                     <div id="step3" style="display: none">
                                         <br/>
-                                        <div class="alert alert-info">
-                                            Revisa que los datos sean correctos, acepta los terminos y condiciones y da click en el boton regalar para cobrar tu regalo
+                                        <div class="well alert-dismissable">
+                                            Revisa que los datos sean correctos, acepta los terminos y condiciones y da click en el boton regalar para realizar tu regalo
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="well alert-info" style="font-size: 16px;">
-                                                    Nombre de quien recibe el regalo: <strong>alfredo bello mon</strong>
+                                                <div class="alert alert-info" style="font-size: 16px;">                                                    
+                                                    Nombre de quien recibe el regalo: <strong><span id="output1"></span></strong>
                                                     <br/>
 
-                                                    Apellidos de quien recibe el regalo:<strong></strong>
+                                                    Apellidos de quien recibe el regalo:<strong><span id="output2"></span></strong>
                                                     <br/>
 
-                                                    Numero telefonico de quien recibe el regalo:<strong></strong>
+                                                    Numero telefonico de quien recibe el regalo:<strong><span id="output3"></span></strong>
                                                     <br/>
 
-                                                    Correo electronico de quien recibe el regalo:<strong></strong>
+                                                    Correo electronico de quien recibe el regalo:<strong><span id="output4"></span></strong>
                                                     <br/>
                                                 </div>
                                             </div>    
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="well alert-info" style="font-size: 16px;">
-                                                    Nombre de quien hace el regalo:<strong></strong>
+                                                <div class="alert alert-warning" style="font-size: 16px;">
+                                                    Nombre de quien hace el regalo:<strong><span id="output5"></span></strong>
                                                     <br/>
 
-                                                    Apellidos de quien hace el regalo:<strong></strong>
+                                                    Apellidos de quien hace el regalo:<strong><span id="output6"></span></strong>
                                                     <br/>
 
-                                                    Numero telefonico de quien hace el regalo:<strong></strong>
+                                                    Numero telefonico de quien hace el regalo:<strong><span id="output7"></span></strong>
                                                     <br/>
 
-                                                    Correo electronico de quien hace el regalo:<strong></strong>
+                                                    Correo electronico de quien hace el regalo:<strong><span id="output8"></span></strong>
                                                     <br/>
                                                 </div>   
                                             </div> 
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="well alert-success" style="font-size: 16px;">
-                                                    nombre del ttitular:<strong></strong>
+                                                <div class="alert alert-success" style="font-size: 16px;">
+                                                    Nombre del titular:<strong><span id="output9"></span></strong>
                                                     <br/>
 
-                                                    Apellidos de quien hace el regalo:<strong></strong>
-                                                    <br/>
-
-                                                    Numero telefonico de quien hace el regalo:<strong></strong>
-                                                    <br/>
-
-                                                    Correo electronico de quien hace el regalo:<strong></strong>
+                                                    Monto:<strong><span id="output10"></span></strong>
                                                     <br/>
                                                 </div>   
                                             </div> 
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <input type="checkbox" id="terminos" name="terminos">
-                                                <label for="terminos">
-                                                    he leido y acepto los terminos y condiciones
+                                                <input type="checkbox" id="terms" name="terms" value="1" tabindex="18">
+                                                <label for="terms">
+                                                    <span id="terms">he leido y acepto los terminos y condiciones</span>
                                                 </label>                                                
                                             </div>
                                         </div>
                                         <br/>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="step2()">
+                                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="step2()" tabindex="19">
                                                     regresar 
                                                 </button>
                                             </div>
                                             <div class="col-md-6">
-                                                <button type="button" class="btn btn-success btn-lg btn-block" onclick="regalar()">
+                                                <button type="button" class="btn btn-success btn-lg btn-block" onclick="step4()" tabindex="20">
                                                     regalar
                                                 </button>
                                             </div>

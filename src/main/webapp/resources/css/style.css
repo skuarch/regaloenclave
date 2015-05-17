@@ -174,7 +174,7 @@ a.main-button, input[type="submit"] {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    font-size: 12px;
+    font-size: 13px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
@@ -187,6 +187,7 @@ a.main-button, input[type="submit"] {
     -moz-transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
+    min-height: 45px;
 }
 
 a.main-button:hover, input[type="submit"]:hover {
