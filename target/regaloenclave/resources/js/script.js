@@ -896,8 +896,12 @@ function step3(){
         error += "-El numero de la tarjeta de credito es incorrecto<br>";
     }
     
-    if(number != "" && String(number).indexOf(" ") == 1 ){
+    if(number != "" && String(number).indexOf(" ") == 1){
         error += "-El numero de la tarjeta contiene caracteres o espacios no aceptados<br/>";        
+    }
+    
+    if(!isAcceptable(number)){
+        error += "-El numero de la tarjeta contiene caracteres o espacios no aceptados<br/>";                
     }
     
     month = $("#month").val();
@@ -1043,9 +1047,9 @@ function step4(){
         error += "-El numero de la tarjeta de credito es incorrecto<br>";
     }
     
-    if(number != "" && String(number).indexOf(" ") == 1 ){
+    if(number != "" && String(number).indexOf(" ") == 1 || !isAcceptable(number) ){
         error += "-El numero de la tarjeta contiene caracteres o espacios no aceptados<br/>";        
-    }    
+    }  
     
     if(month < 1 || month > 12){
         error += "-El mes es incorrecto<br/>";        
@@ -1100,16 +1104,23 @@ function step4(){
             beforeSend: function (xhr) {
                 //$("#step3").html("estamos creando tu sorpresa por favor espera");
             }, success: function (data, textStatus, jqXHR) {
-                if(data.created == true){
-                    alertify.alert("tu regalo se realizo con exito");
-                }else{
-                    showError()
-                }                
-                //$("#step3").html("tu regalo se realizo con exito");
+                if(data.errorBank == true){
+                    alertify.alert("No se pudo realizar el cobro a tu tarjeta<br/>checa que los datos de tu tarjeta de credito sean los correctos<br/>");
+                    alertify.error("No se pudo realizar el cobro a tu tarjeta");                    
+                    $("#step3").fadeIn();
+                } else {
+                    if (data.created == true) {
+                        alertify.alert("tu regalo se realizo con exito");
+                        $("#step3").html("tu regalo se realizo con exito");
+                    } else {
+                        showError();
+                        $("#step3").fadeIn();
+                    }
+                }
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log(errorThrown);
                 showError();
-                //$("#step3").html("tuvimos un error por favor vuelve a intentarlo");
+                $("#step3").html("tuvimos un error por favor vuelve a intentarlo");
             }
         });
     }

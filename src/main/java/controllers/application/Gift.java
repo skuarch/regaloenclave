@@ -113,7 +113,7 @@ public class Gift extends BaseController {
             parameters.put("number", number);
             parameters.put("month",month);
             parameters.put("year",year);
-            parameters.put("secret",secret);
+            parameters.put("cvv",secret);
             parameters.put("amount",100.00);            
             
             json = RestPostClient.sendReceive(

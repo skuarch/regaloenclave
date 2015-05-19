@@ -169,12 +169,12 @@
                                                 <div class="col-md-6">
                                                     / (año)<br/>
                                                     <select id="year" name="year" class="form-control" tabindex="13">
-                                                        <option>2015</option>
-                                                        <option>2016</option>
-                                                        <option>2017</option>
-                                                        <option>2018</option>
-                                                        <option>2019</option>
-                                                        <option>2020</option>
+                                                        <option>15</option>
+                                                        <option>16</option>
+                                                        <option>17</option>
+                                                        <option>18</option>
+                                                        <option>19</option>
+                                                        <option>20</option>
                                                     </select>                                                    
                                                 </div>                                            
                                             </div>
