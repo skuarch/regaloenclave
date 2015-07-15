@@ -12,7 +12,7 @@
             <!-- End Toggle Nav Link For Mobiles -->
             <a class="navbar-brand" href="<c:url value="/welcome"/>">
                 <!--<img alt="" src="<c:url value="/resources/images/margo.png"/>">-->
-                <span class="fa fa-gift"></span>
+                <span> <img src="<c:url value="/resources/images/logo45x45.png"/>"/></span>
                 <strong class="red">Regalo</strong>en<strong>Clave</strong>
             </a>
         </div>

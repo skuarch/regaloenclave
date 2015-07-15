@@ -2,7 +2,6 @@ package controllers.affiliate;
 
 import java.util.Locale;
 import controllers.application.BaseController;
-import model.logic.Constants;
 import model.util.HandlerExceptionUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,8 +30,7 @@ public class Affiliate extends BaseController {
 
         try {
             
-            mav = new ModelAndView("affiliate/affiliate");
-            mav.addObject("ip", Constants.IP_ADDRESSS);
+            mav = new ModelAndView("affiliate/affiliate");            
             
         } catch (Exception e) {
             HandlerExceptionUtil.alert(mav, messageSource, e, logger, locale);

@@ -60,16 +60,18 @@
                     <h4>Informacion<span class="head-line"></span></h4>
                     <ul>
                         <li>
-                            <p><a href="<c:url value="/freelancer"/>">Unete a nuestro equipo, </a>se parte de nuestro equipo de freelancers</p>
-                            <span><a href="<c:url value="/freelancer"/>">mas informacion >></a></span>
+                            Se parte de nuestro equipo de freelancers
+                            <p><a class="btn btn-info btn-block" href="http://freelancer.regaloenclave.com" target="_blank">Unete a nuestro equipo</a></p>                            
                         </li>
                         <li>
-                            <p><a href="<c:url value="/createPartnerForm"/>">Aumenta tus ingresos, </a>los afiliados a regalo en clave aumentan sus ingresos facilmente</p>
-                            <span><a href="<c:url value="/affiliate"/>">entra al sistema de afiliados de regalo en clave >></a></span>
+                            Aumenta las ventas en tu empresa
+                            <p><a class="btn btn-info btn-block" href="<c:url value="/createPartnerForm"/>">Unirme a regalo en clave</a></p>
+                            Sistema de afiliados
+                            <span><a class="btn btn-info btn-block" href="http://afiliado.regaloenclave.com">Sistema de afiliados</a></span>
                         </li>
-                        <li>
-                            <p><a href="<c:url value="/faq"/>">Preguntas frecuentes, </a>resuelve tus dudas.</p>
-                            <span><a href="<c:url value="/faq"/>">mas informacion >></a></span>
+                        <li>                            
+                            Resuelve tus dudas
+                            <p><a class="btn btn-info btn-block" href="<c:url value="/faq"/>">Preguntas frecuentes, </a></p>                            
                         </li>
                     </ul>
                 </div>
@@ -141,10 +143,13 @@
                         <!--<img src="<c:url value="/resources/images/footer-margo.png"/>" class="img-responsive" alt="Footer Logo" />-->
                         <span class="red">Regalo</span> en Clave
                     </h4>
-                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    <p>
+                        si quieres ver los regalos que haz realizado y te han dado entra aqui
+                        <a class="btn btn-info btn-block" href="<c:url value="/myGifs" />">Mis regalos</a>
+                    </p>
                     <ul>
-                        <li><span>Phone Number:</span>(33) 1817 6000</li>
-                        <li><span>Email:</span> contacto@regaloenclave.com</li>
+                        <li><span>Telefono:</span>(33) 1817 6000</li>
+                        <li><span>Correo electronico:</span> contacto@regaloenclave.com</li>
                         <li><span>Website:</span> www.regaloenclave.com</li>
                     </ul>
                 </div>
@@ -157,14 +162,16 @@
         <!-- Start Copyright -->
         <div class="copyright-section">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <p>&copy; 2015 Regalo en clave -  All Rights Reserved</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-8">
                     <ul class="footer-nav">
                         <li><a href="<c:url value="/sitemap"/>">mapa de sitio</a></li>
-                        <li><a href="<c:url value="/privacyPolicy"/>">Politicas de privacidad</a></li>
-                        <li><a href="<c:url value="/contact"/>">Contacto</a></li>
+                        <li><a href="<c:url value="/useTerms"/>">terminos de uso</a></li>
+                        <li><a href="<c:url value="/privacyPolicy"/>">politicas de privacidad</a></li>
+                        <!--<li><a href="<c:url value="/condicionesUso"/>">condiciones de uso</a></li>-->
+                        <li><a href="<c:url value="/contact"/>">contacto</a></li>
                     </ul>
                 </div>						
             </div>

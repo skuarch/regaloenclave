@@ -63,40 +63,6 @@
                                     <div id="step1">
                                         <br/>
                                         <div class="alert alert-info">
-                                            elige a quien regalar
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="name1">
-                                                    <strong>Nombre(s)</strong><span class="required">*</span>
-                                                </label>                                            
-                                                <input id="name1" name="name1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="1">
-                                            </div>                                    
-                                            <div class="col-md-6">
-                                                <label for="lastName1">
-                                                    <strong>Apellido(s)</strong><span class="required">*</span>
-                                                </label>                                            
-                                                <input id="lastName1" name="lastName1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="2">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <label for="phone1">
-                                                    <strong>Numero telefonico</strong>
-                                                </label>                                            
-                                                <input id="phone1" name="phone1" type="number" class="form-control" value="" size="30" tabindex="3">
-                                            </div>                                    
-                                            <div class="col-md-6">
-                                                <label for="email1">
-                                                    <strong>Correo electronico</strong><span class="required">*</span>
-                                                </label>                                            
-                                                <input id="email1" name="email1" type="email" class="form-control" value="" size="30" required="required" tabindex="4">
-                                            </div>
-                                        </div>
-
-                                        <br/>
-
-                                        <div class="alert alert-info">
                                             Tus datos
                                         </div>                               
                                         <div class="row">
@@ -127,6 +93,41 @@
                                                 <input id="email2" name="email2" type="text" class="form-control" value="" size="30" required="required" tabindex="8">
                                             </div>
                                         </div>
+
+                                        <br/>
+
+                                        <div class="alert alert-warning">
+                                            Elige a quien regalar
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="name1">
+                                                    <strong>Nombre(s)</strong><span class="required">*</span>
+                                                </label>                                            
+                                                <input id="name1" name="name1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="1">
+                                            </div>                                    
+                                            <div class="col-md-6">
+                                                <label for="lastName1">
+                                                    <strong>Apellido(s)</strong><span class="required">*</span>
+                                                </label>                                            
+                                                <input id="lastName1" name="lastName1" type="text" class="form-control" value="" size="30" maxlength="30" required="required" tabindex="2">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label for="phone1">
+                                                    <strong>Numero telefonico</strong>
+                                                </label>                                            
+                                                <input id="phone1" name="phone1" type="number" class="form-control" value="" size="30" tabindex="3">
+                                            </div>                                    
+                                            <div class="col-md-6">
+                                                <label for="email1">
+                                                    <strong>Correo electronico</strong><span class="required">*</span>
+                                                </label>                                            
+                                                <input id="email1" name="email1" type="email" class="form-control" value="" size="30" required="required" tabindex="4">
+                                            </div>
+                                        </div>
+                                        <br/>
                                         <input type="submit" class="btn btn-block btn-success btn-lg" value="siguiente paso" tabindex="9">
                                     </div>
                                     <div id="step2" style="display: none">
@@ -149,21 +150,21 @@
                                             <div class="col-md-6">                                                
                                                 <div class="col-md-6">
                                                     <div class="form-group">                                                    
-                                                    valida: (mes)<br/>
-                                                    <select id="month" name="month" class="form-control" tabindex="12">
-                                                        <option>01</option>
-                                                        <option>02</option>
-                                                        <option>03</option>
-                                                        <option>04</option>
-                                                        <option>05</option>
-                                                        <option>06</option>
-                                                        <option>07</option>
-                                                        <option>08</option>
-                                                        <option>09</option>
-                                                        <option>10</option>
-                                                        <option>11</option>
-                                                        <option>12</option>
-                                                    </select>  
+                                                        valida: (mes)<br/>
+                                                        <select id="month" name="month" class="form-control" tabindex="12">
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                        </select>  
                                                     </div>
                                                 </div>                                                
                                                 <div class="col-md-6">
@@ -178,7 +179,7 @@
                                                     </select>                                                    
                                                 </div>                                            
                                             </div>
-                                        
+
                                             <div class="col-md-6">
                                                 codigo de validacion de la tarjeta de credito:
                                                 <input id="secret" name="secret" type="number" class="form-control" tabindex="14">
@@ -210,9 +211,79 @@
                                                 </button>
                                             </div>
                                         </div>                                        
-                                    </div>
+                                    </div>                                   
+
                                     <div id="step3" style="display: none">
+                                        <div id="cards" class="text-center">
+                                            <br/>
+                                            <br/>
+                                            <div class="alert alert-info">
+                                                selecciona la tarjeta para enviar tu regalo
+                                            </div>
+                                            <br/>
+                                            <br/>                                        
+                                            <input type="radio" name="card" value="1" id="card1" checked="checked"/>
+                                            <label for="card1">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_1.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <input type="radio" name="card" value="2" id="card2"/>
+                                            <label for="card2">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_2.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <input type="radio" name="card" value="3" id="card3"/>
+                                            <label for="card3">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_3.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <br/>
+                                            <input type="radio" name="card" value="4" id="card4"/>
+                                            <label for="card4">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_4.jpg"  width="260px" height="260px"/>
+                                            </label>                                         
+                                            <input type="radio" name="card" value="5" id="card5"/>
+                                            <label for="card5">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_5.jpg"  width="260px" height="260px"/>
+                                            </label>                                        
+                                            <input type="radio" name="card" value="6" id="card6"/>
+                                            <label for="card6">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_6.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <br/>
+                                            <input type="radio" name="card" value="7" id="card7"/>
+                                            <label for="card7">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_7.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <input type="radio" name="card" value="8" id="card8"/>
+                                            <label for="card8">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_8.jpg"  width="260px" height="260px"/>
+                                            </label>                                        
+                                            <input type="radio" name="card" value="9" id="card9"/>
+                                            <label for="card9">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_9.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <br/>
+                                            <input type="radio" name="card" value="10" id="card10"/>
+                                            <label for="card10">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_10.jpg"  width="260px" height="260px"/>
+                                            </label>                                        
+                                            <input type="radio" name="card" value="11" id="card11"/>
+                                            <label for="card11">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_11.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                            <input type="radio" name="card" value="12" id="card12"/>
+                                            <label for="card12">
+                                                <img src="http://static.regaloenclave.com/images/tarjeta_12.jpg"  width="260px" height="260px"/>
+                                            </label>
+                                        </div>
+
                                         <br/>
+                                        <div class="row text-center">
+                                            <div class="col-md-7 text-center">
+                                                <strong>Mensaje</strong>
+                                                <textarea id="message" cols="1" rows="3" placeholder="escribe un mensaje o dedicatoria al beneficiario" class="form-control"></textarea>
+                                            </div>
+                                        </div>    
+                                        <br/>
+                                        
                                         <div class="well alert-dismissable">
                                             Revisa que los datos sean correctos, acepta los terminos y condiciones y da click en el boton regalar para realizar tu regalo
                                         </div>
@@ -269,6 +340,7 @@
                                                 </label>                                                
                                             </div>
                                         </div>
+                                        <div id="message" class="alert alert-info" style="display: none"></div>
                                         <br/>
                                         <div class="row">
                                             <div class="col-md-6">
@@ -282,7 +354,12 @@
                                                 </button>
                                             </div>
                                         </div>                                        
-                                    </div>   
+                                    </div> 
+                                    <div id="success" name="success" style="display: none" class="text-center">
+                                        <img src="<c:url value="/resources/images/g1.png" />" width="15%" height="15%"/>
+                                        <br/>
+                                        tu regalo se realizo correctamente
+                                    </div>
                                 </form>
                             </div>
                         </div>                        

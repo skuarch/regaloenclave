@@ -50,7 +50,8 @@ body {
     line-height: 21px;
 	font-weight: 300;
 	color: #888;
-	background: url(../images/patterns/8.png) fixed repeat;
+	/*background: url(../images/patterns/8.png) fixed repeat;*/
+        background-color: #F8F8F8;
 }
 strong, b {
 	font-weight: 600;
@@ -3067,7 +3068,7 @@ ul.icons-list li i {
 }
 
 .text-center {
-    margin-bottom: 35px;
+    margin-bottom: 5px;
 }
 
 #portfolio-list {
@@ -5663,4 +5664,10 @@ ul.footer-nav li a:hover {
 
 .green{
     color: #2EFE2E !important;
+}
+.box150x150{
+    width: 150px !important;
+    height: 150px !important;
+    min-height: 150px !important;
+    min-width: 150px !important;
 }

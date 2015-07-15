@@ -24,7 +24,7 @@ public class CreatePartner extends BaseController {
     //==========================================================================
     @RequestMapping(value = "createPartner")
     public ModelAndView createAffiliatePerson(@ModelAttribute Partner partner) {
-
+        System.out.println("entro caon");
         ModelAndView mav = new ModelAndView("application/json");
         JSONObject jsono = new JSONObject();
         HashMap parameters = null;
@@ -39,7 +39,7 @@ public class CreatePartner extends BaseController {
                         Constants.API_URL, 
                         Constants.API_FIRST_VERSION, 
                         Constants.URI_PARTNER_CREATE
-                );
+                );System.out.println("jsonString " + jsonString);
                 jsono.put("created", true);
                 
             } else {

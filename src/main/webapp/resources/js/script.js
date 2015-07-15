@@ -13,8 +13,10 @@ $(window).load(function () {
 
 $(document).ready(function ($) {
 	"use strict";
-	$('#loader').fadeOut();
-	
+	$('#loader').fadeOut("fast",0);
+        if (location.href.indexOf("https://") == - 1) {
+            location.href = location.href.replace("http://", "https://");
+        }
 	
 	/*----------------------------------------------------*/
 	/*	Hidder Header
@@ -548,8 +550,6 @@ $(document).ready(function ($) {
 		
 		init();
 		
-		
-		
 	})();
 });
 
@@ -653,12 +653,19 @@ function myGifts(){
             data:{email:email},
             url: "reportGifts",            
             type: 'POST',
-            success: function (data, textStatus, jqXHR) {
-                $("#send").attr("disabled", "disabled");
-                showSuccess();
-                $("#message").fadeIn();
+            beforeSend: function (xhr) {
+                $("#message").fadeOut();                                                                                                    
             },
-            error: function (jqXHR, textStatus, errorThrown) {alert(textStatus);
+            success: function (data, textStatus, jqXHR) {
+                if(data.status == true){
+                    $("#send").attr("disabled", "disabled");
+                    showSuccess();
+                    $("#message").fadeIn();
+                }else{
+                    alertify.error("lo sentimos tuvimos un error, serciorate que los datos sean correctos e intentalo de nuevo");
+                }                
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
                 showError();
             }
         }); 
@@ -970,7 +977,9 @@ function step3(){
 
 function step4(){
     
-    var error = "";    
+    var error = ""; 
+    var card = $('input[name=card]:checked').val();
+    var message = $("#message").val();
     
     if(name1 == '' || name1.length < 3 ){
         error += "-El nombre es muy corto<br/>";        
@@ -1094,15 +1103,16 @@ function step4(){
     if(error.length > 0){
         alertify.alert("Parece que algo esta mal<br/><br/>" + error + "<br/>");
         return;
-    }else{                
-        formData = {name1: name1,lastName1: lastName1,phone1: phone1,email1: email1,name2: name2,lastName2: lastName2,phone2: phone2,email2: email2,holder: holder,number: number,month: month,year: year,secret: secret,amount: amount};
+    }else{        
+        formData = {name1: name1,lastName1: lastName1,phone1: phone1,email1: email1,name2: name2,lastName2: lastName2,phone2: phone2,email2: email2,holder: holder,number: number,month: month,year: year,secret: secret,amount: amount, card:card, message: message};
         $.ajax({
             cache: false,
             url: "gift",
             type: "post",
             data: formData,            
             beforeSend: function (xhr) {
-                //$("#step3").html("estamos creando tu sorpresa por favor espera");
+                $("#message").html("estamos creando tu sorpresa por favor espera");
+                $("#message").fadeIn();
             }, success: function (data, textStatus, jqXHR) {
                 if(data.errorBank == true){
                     alertify.alert("No se pudo realizar el cobro a tu tarjeta<br/>checa que los datos de tu tarjeta de credito sean los correctos<br/>");
@@ -1111,7 +1121,8 @@ function step4(){
                 } else {
                     if (data.created == true) {
                         alertify.alert("tu regalo se realizo con exito");
-                        $("#step3").html("tu regalo se realizo con exito");
+                        $("#step3").hide();
+                        $("#success").fadeIn();
                     } else {
                         showError();
                         $("#step3").fadeIn();
@@ -1120,13 +1131,43 @@ function step4(){
             }, error: function (jqXHR, textStatus, errorThrown) {
                 console.log(errorThrown);
                 showError();
-                $("#step3").html("tuvimos un error por favor vuelve a intentarlo");
+                $("#step3").fadeIn();
+            }, complete: function (jqXHR, textStatus) {
+                $("#message").fadeOut();
             }
         });
     }
     
 }
 
+function affiliatesAjax(){    
+    $.ajax({
+        url:"affiliateList",
+        type:"post",
+        beforeSend: function (xhr) {
+            $("#output").html("cargando...");
+        },
+        success: function (data, textStatus, jqXHR) {
+            $("#output").html(data);
+        }        
+    });
+}
 
+function realocate(id, type){
+    window.location.href='landigpage/'+ id + '/' + type + '/';
+}
+
+function landingpageDetails(id, type){
+    $.ajax({
+        url:"../../../landingpageDetails",
+        type:"post",
+        data:{id:id,type:type},
+        beforeSend: function (xhr) {
+            $("#output").html("cargando...");
+        },success: function (data, textStatus, jqXHR) {
+            $("#output").html(data);
+        } 
+    });
+}
 
 /* ----------------- End JS Document ----------------- */

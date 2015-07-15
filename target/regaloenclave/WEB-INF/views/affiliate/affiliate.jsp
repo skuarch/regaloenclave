@@ -11,6 +11,6 @@
         <title>regalo en clave</title>
     </head>
     <frameset>
-        <frame src="http://${ip}/affiliate/">
+        <frame src="http://afiliado.regaloenclave.com" />
     </frameset>
 </html> 

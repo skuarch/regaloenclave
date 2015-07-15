@@ -19,7 +19,7 @@
             </header>
 
             <!-- Start Page Banner -->
-            <div class="page-banner" style="padding:40px 0; background: url(images/slide-02-bg.jpg) center #f9f9f9;">
+            <div class="page-banner">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
@@ -146,62 +146,8 @@
                     </div>
 
                     <!-- Divider -->
-                    <div class="hr1" style="margin-bottom:50px;"></div>
-
-                    <!-- Start Clients Carousel -->
-                    <div class="our-clients">
-
-                        <!-- Classic Heading -->
-                        <h4 class="classic-title"><span>Asociados</span></h4>
-
-                        <div class="clients-carousel custom-carousel touch-carousel" data-appeared-items="5">
-
-                            <!-- Client 1 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c1.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 2 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c2.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 3 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c3.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 4 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c4.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 5 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c5.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 6 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c6.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 7 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c7.png" alt="" /></a>
-                            </div>
-
-                            <!-- Client 8 -->
-                            <div class="client-item item">
-                                <a href="#"><img src="images/c8.png" alt="" /></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- End Clients Carousel -->
-
-
-                </div>
+                    <div class="hr1" style="margin-bottom:50px;"></div>                    
+                    
             </div><!-- End content -->
         </div>
         <jsp:include page="footer.jsp" />

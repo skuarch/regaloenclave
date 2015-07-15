@@ -31,8 +31,7 @@ public class Partner extends BaseController {
 
         try {
             
-            mav = new ModelAndView("affiliate/affiliate");
-            mav.addObject("ip", Constants.IP_ADDRESSS);
+            mav = new ModelAndView("affiliate/affiliate");            
             
         } catch (Exception e) {
             HandlerExceptionUtil.alert(mav, messageSource, e, logger, locale);

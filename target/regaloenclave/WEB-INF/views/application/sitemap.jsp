@@ -37,7 +37,7 @@
                     <!-- Start Call Action -->
                     <div class="call-action call-action-boxed call-action-style1 clearfix">
                         <!-- Call Action Button -->
-                        <div class="button-side" style="margin-top:8px;"><a href="giveAway" class="btn btn-default btn-lg">Regalar</a></div>
+                        <div class="button-side" style="margin-top:8px;"><a href="<c:url value="/giveAway" />" class="btn btn-default btn-lg">Regalar</a></div>
                         <h2 class="primary"><strong>Regalar</strong> da un regalo a cualquier persona</h2>
                         <p>pagina para hacer regalos</p>
                     </div>

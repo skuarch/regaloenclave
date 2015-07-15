@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class Company {
 
     //==========================================================================
-    @RequestMapping(value = {"company", "/company", "compañia", "/compañia"})
+    @RequestMapping(value = {"company", "/company", "compañia", "/compañia","quees", "ques"})
     public ModelAndView methodName(){
 
         ModelAndView mav = null;

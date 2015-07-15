@@ -31,8 +31,7 @@ public class freelancer extends BaseController {
 
         try {
             
-            mav = new ModelAndView("freelancer/freelancer");
-            mav.addObject("ip", Constants.IP_ADDRESSS);
+            mav = new ModelAndView("freelancer/freelancer");            
             
         } catch (Exception e) {
             HandlerExceptionUtil.alert(mav, messageSource, e, logger, locale);

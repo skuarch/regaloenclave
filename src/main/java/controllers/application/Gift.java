@@ -44,6 +44,8 @@ public class Gift extends BaseController {
             @RequestParam int year,
             @RequestParam int secret,
             @RequestParam BigDecimal amount,
+            @RequestParam int card,
+            @RequestParam String message,
             Locale locale) {
 
         ModelAndView mav = null;
@@ -101,20 +103,22 @@ public class Gift extends BaseController {
             }*/
 
             parameters = new HashMap();
-            parameters.put("depositor.name", name1);
-            parameters.put("depositor.lastName",lastName1);
-            parameters.put("depositor.phone",phone1);
-            parameters.put("depositor.email",email1);
-            parameters.put("recipient.name",name2);
-            parameters.put("recipient.lastName", lastName2);
-            parameters.put("recipient.phone", phone2);
-            parameters.put("recipient.email",email2);
+            parameters.put("depositor.name", name2);
+            parameters.put("depositor.lastName",lastName2);
+            parameters.put("depositor.phone",phone2);
+            parameters.put("depositor.email",email2);
+            parameters.put("recipient.name",name1);
+            parameters.put("recipient.lastName", lastName1);
+            parameters.put("recipient.phone", phone1);
+            parameters.put("recipient.email",email1);
             parameters.put("holder", holder);
             parameters.put("number", number);
             parameters.put("month",month);
             parameters.put("year",year);
             parameters.put("cvv",secret);
-            parameters.put("amount",100.00);            
+            parameters.put("amount",amount);            
+            parameters.put("card",card);            
+            parameters.put("message",message);            
             
             json = RestPostClient.sendReceive(
                     parameters, 

@@ -117,7 +117,7 @@
             </div>
         </div>
         <jsp:include page="scripts.jsp" />
-        <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
         <script>
             (function ($) {
                 $.fn.CustomMap = function (options) {

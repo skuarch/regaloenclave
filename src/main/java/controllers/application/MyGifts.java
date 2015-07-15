@@ -22,7 +22,7 @@ public class MyGifts extends BaseController {
     private MessageSource messageSource;        
 
     //==========================================================================
-    @RequestMapping(value = {"/misRegalos" ,"misRegalos", "myGifs", "/myGifs"})
+    @RequestMapping(value = {"/misRegalos" ,"misRegalos","misregalos", "myGifs", "/myGifs"})
     public ModelAndView methodName(Locale locale){
 
         ModelAndView mav = null;

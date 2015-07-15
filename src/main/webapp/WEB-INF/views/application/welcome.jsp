@@ -65,7 +65,7 @@
                         <!-- Start Service Icon 4 -->
                         <div class="col-md-3 col-sm-6 service-box service-center">
                             <div class="service-icon">
-                                <i class="fa fa-rocket icon-large"></i>
+                                <i class="fa fa-diamond icon-large"></i>
                             </div>
                             <div class="service-content">
                                 <h4>Motivos</h4>
@@ -258,8 +258,7 @@
                             </div>
                             <!--End Clients Carousel-->
                         </div>
-                    </div>
-                    <jsp:include page="miniBar.jsp"/>
+                    </div>                    
                 </div>
             </div>
             <!-- End Content -->
