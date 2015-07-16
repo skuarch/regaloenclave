@@ -117,42 +117,42 @@ El comprador al registrarse, tiene acceso en el mismo sistema a un reporte con e
 
                             <!-- Client 1 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c1.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c1.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 2 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c2.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c2.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 3 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c3.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c3.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 4 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c4.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c4.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 5 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c5.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c5.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 6 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c6.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c6.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 7 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c7.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c7.png"/>" alt="" /></a>
                             </div>
 
                             <!-- Client 8 -->
                             <div class="client-item item">
-                                <a href="#"><img src="images/c8.png" alt="" /></a>
+                                <a href="#"><img src="<c:url value="/resources/images/c8.png"/>" alt="" /></a>
                             </div>
 
                         </div>

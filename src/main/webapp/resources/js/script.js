@@ -894,9 +894,9 @@ function step3(){
         error += "-El nombre del titular de la tarjeta de credito es muy corto<br>";
     }
     
-    if(holder != "" && !isAcceptable(holder)){
+    /*if(holder != "" && !isAcceptable(holder)){
         error += "-El titular de la tarjeta contiene caracteres no aceptados<br/>";        
-    }
+    }*/
     
     number = $("#number").val();
     if(number == '' || number.length < 16 || number.length > 16 ){
@@ -1048,9 +1048,9 @@ function step4(){
         error += "-El nombre del titular de la tarjeta de credito es muy corto<br>";
     }
     
-    if(holder != "" && !isAcceptable(holder)){
+    /*if(holder != "" && !isAcceptable(holder)){
         error += "-El titular de la tarjeta contiene caracteres no aceptados<br/>";        
-    }
+    }*/
     
     if(number == '' || number.length < 16 || number.length > 16 ){
         error += "-El numero de la tarjeta de credito es incorrecto<br>";

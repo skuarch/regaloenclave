@@ -122,7 +122,7 @@
                     <!-- Start Call Action -->
                     <div class="call-action call-action-boxed call-action-style1 clearfix">
                         <!-- Call Action Button -->
-                        <div class="button-side" style="margin-top:8px;"><a href="privacyPolitics" class="btn btn-default btn-lg">Politicas de privacidad</a></div>
+                        <div class="button-side" style="margin-top:8px;"><a href="privacyPolicy" class="btn btn-default btn-lg">Politicas de privacidad</a></div>
                         <h2 class="primary"><strong>Politicas de privadidad</strong> lo que debes de leer de regalo en clave</h2>
                         <p>condiciones de uso</p>
                     </div>

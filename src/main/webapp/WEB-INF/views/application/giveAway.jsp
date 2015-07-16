@@ -187,7 +187,7 @@
                                         </div>                                    
                                         <div class="row">
                                             <div class="col-md-12">
-                                                Monto a regalar
+                                                Monto a regalar (sin centavos)
                                                 <input type="number" id="amount" name="amount" class="form-control" placeholder="cantidad minima $100 pesos, solo multiplos de 100" tabindex="15">
                                             </div>                                               
                                         </div>    
@@ -277,7 +277,7 @@
 
                                         <br/>
                                         <div class="row text-center">
-                                            <div class="col-md-7 text-center">
+                                            <div class="col-md-8 text-center col-lg-offset-2">
                                                 <strong>Mensaje</strong>
                                                 <textarea id="message" cols="1" rows="3" placeholder="escribe un mensaje o dedicatoria al beneficiario" class="form-control"></textarea>
                                             </div>
