@@ -616,7 +616,8 @@ function isEmail(email) {
 function isAcceptable(text) {
     
     //if (text != undefined && text.match(/^[0-9a-zA-Z\s]{1,16}$/)) {
-    if (text != undefined && text.match(/^(\w+ ?)*$/)) {
+    //if (text != undefined && text.match(/^(\w+ ?)*$/)) {
+    if (text != undefined && text.match(/^[a-zA-Z\u00f1\u00d1 ]*$/)) { //with ñ
         text = "";
         return true;
     } else {

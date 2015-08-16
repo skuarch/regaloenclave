@@ -12,7 +12,7 @@ public class Constants {
     public static final int INCREASE_COUNTER = 60;
     public static final String IP_ADDRESSS = "104.156.237.68";
     
-    public static final String API_URL = "https://192.168.1.12/api-rec";
+    public static final String API_URL = "https://localhost/api-rec";
     public static final String API_FIRST_VERSION = "/v1";
     public static final String URI_AUTHENTICATION = "/authentication";
     public static final String URI_FREELANCER_CREATE = "/freelancer/create";    

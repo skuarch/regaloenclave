@@ -144,7 +144,7 @@
                         <span class="red">Regalo</span> en Clave
                     </h4>
                     <p>
-                        si quieres ver los regalos que haz realizado y te han dado entra aqui
+                        si quieres ver los regalos que has realizado y te han dado entra aqui
                         <a class="btn btn-info btn-block" href="<c:url value="/myGifs" />">Mis regalos</a>
                     </p>
                     <ul>
